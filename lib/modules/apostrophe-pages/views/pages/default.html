@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
-{% block beforeMain %}
 {# Navbar #}
+{% block extraHead %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<a class="navbar-brand" href="/">Ariq Haqq</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,8 +36,10 @@
 		</ul>
 	</div>
 </nav>
+{% endblock %}
 
 {# Jumbotron #}
+{% block beforeMain %}
 <div class="jumbotron jumbotron-fluid">
 	<div class="container">
 		<h1 class="display-4">{{ apos.singleton(data.page, 'jumbotronTitle', 'apostrophe-rich-text', {
