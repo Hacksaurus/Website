@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block beforeMain %}
+{# Navbar #}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="/">Ariq Haqq</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			{# Home #}
+			{% if data.page.title == "Home" %}
+				<li class="nav-item active">
+					<a class="nav-link" href="/">Home<span class="sr-only"></span></a>
+				</li>
+			{% else %}
+				<li class="nav-item">
+					<a class="nav-link" href="/">Home</a>
+				</li>
+			{% endif %}
+			
+			{# Children #}
+			{% for tab in data.home._children %}
+				{% if data.page.title == tab.title %}
+					<li class="nav-item active">
+					<a class="nav-link" href="{{ tab._url }}">{{ tab.title }}<span class="sr-only"></span></a>
+				</li>
+				{% else %}
+					<li class="nav-item">
+						<a class="nav-link" href="{{ tab._url }}">{{ tab.title }}</a>
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
+</nav>
+
+{# Jumbotron #}
+<div class="jumbotron jumbotron-fluid">
+	<div class="container">
+		<h1 class="display-4">{{ apos.singleton(data.page, 'jumbotronTitle', 'apostrophe-rich-text', {
+		toolbar: [ 'Bold', 'Italic' ]
+		}) }}</h1>
+		<p class="lead">{{ apos.singleton(data.page, 'jumbotronContent', 'apostrophe-rich-text', {
+		toolbar: [ 'Bold', 'Italic' ]
+		}) }}</p>
+	</div>
+</div>
+{% endblock %}
+
+{# Main #}
+{% block main %}
+<div class="container">
+{{ apos.area(data.page, 'content', {
+	blockLevelControls: true,
+	widgets: {
+		'apostrophe-rich-text': {
+		toolbar: [ 'Styles', 'Bold', 'Italic', 'Blockquote', 'Link', 'Anchor', 'Unlink', 'BulletedList' ],
+		styles: [
+			{ name: 'Heading', element: 'h3' },
+			{ name: 'Subheading', element: 'h5' },
+			{ name: 'Paragraph', element: 'p' }
+		]},
+		'apostrophe-video': {}
+	}
+}) }}
+</div>
+{% endblock %}
+
+{# Footer - Static in order for footer.css to work#}
+{% block afterMain %}
+<footer class="footer">
+	<div class="container-fluid">
+		<hr />
+		<span>Created by Ariq Haqq</span>
+	</div>
+</footer>
+{% endblock %}
+

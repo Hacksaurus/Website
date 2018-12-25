@@ -1,0 +1,33 @@
+{
+  "name": "Ariq_Haqq",
+  "version": "2.0.0",
+  "description": "Minimal Apostrophe Boilerplate",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "P'unk Avenue",
+  "license": "MIT",
+  "dependencies": {
+    "apostrophe": "^2.47.0",
+    "apostrophe-blog": "^2.1.2"
+  },
+  "nodemonConfig": {
+    "verbose": true,
+    "ignore": [
+      "lib/modules/*/public/js/*.js",
+      "locales/*.json",
+      "public/modules/**/*.less",
+      "public/modules/**/*.js",
+      "public/uploads",
+      "public/apos-minified/*.js",
+      "public/css/master-*.less",
+      "data"
+    ],
+    "ext": "json, js, html, less"
+  }
+}

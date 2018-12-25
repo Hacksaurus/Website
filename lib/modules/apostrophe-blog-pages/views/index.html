@@ -1,0 +1,20 @@
+{% extends 'apostrophe-pages:pages/default.html' %}
+
+{% block main %}
+<div class="container">
+	<div class="row">
+		{% for piece in data.pieces %}
+		<div class="col-md-4 pr-0 mt-3">
+		<div class="card">
+			<div class="card-body">
+				<h5 class="card-title">{{ piece.title }}</h5>
+				<h6 class="card-subtitle mb-2 text-muted">{{ piece.publishedAt | date('MMMM Do, YYYY') }}</h6>
+				<a href="{{ piece._url}}" class="card-link">View</a>
+			</div>
+		</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+{% endblock %}
+
