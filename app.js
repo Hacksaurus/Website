@@ -26,7 +26,7 @@ var apos = require('apostrophe')({
 		'apostrophe-blog-widgets': {},
 		'apostrophe-pages': {
 			types: [{
-					name: 'default',
+					name: 'home',
 					label: 'Default'
 				}, {
 					name: 'apostrophe-blog-page',
@@ -52,7 +52,8 @@ var apos = require('apostrophe')({
 					name: 'bootstrap.min'
 				}
 			]
-		}
+		},
+		'github-page-widgets': {}
 	}
 });
 

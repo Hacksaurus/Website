@@ -1,11 +1,12 @@
-{% extends 'apostrophe-pages:pages/default.html' %}
+{% extends 'apostrophe-pages:pages/home.html' %}
 
 {# Jumbotron #}
 {% block beforeMain %}
-<div class="jumbotron">
+<div class="jumbotron jumbotron-fluid">
 	<div class="container">
 		<h1 class="display-4">{{ data.piece.title }}</h1>
 		<p class="lead">{{ data.piece.publishedAt | date('MMMM Do, YYYY') }}</p>
+		<a href="{{ data.page._url }}"><button type="button" class="btn btn-primary">Back to {{ data.page.title }}</button></a>
 	</div>
 </div>
 {% endblock %}
@@ -23,7 +24,8 @@
 			{ name: 'Subheading', element: 'h5' },
 			{ name: 'Paragraph', element: 'p' }
 		]},
-		'apostrophe-video': {}
+		'apostrophe-video': {},
+		'github-page': {}
 	}
 }) }}
 </div>
