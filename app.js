@@ -46,6 +46,11 @@ var apos = require('apostrophe')({
 					import: {
 						inline: true
 					}
+				}, {
+					name: 'images',
+					import: {
+						inline:true
+					}
 				}
 			],
 			scripts: [{
