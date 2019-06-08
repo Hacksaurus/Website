@@ -6,13 +6,13 @@
 	<div class="row">
 		{% for piece in data.pieces %}
 		<div class="col-md-4 pl-2 pr-2 mt-3">
-		<div class="card">
-			<div class="card-body">
-				<h5 class="card-title">{{ piece.title }}</h5>
-				<h6 class="card-subtitle mb-2 text-muted">{{ piece.publishedAt | date('MMMM Do, YYYY') }}</h6>
-				<a href="{{ piece._url}}" class="card-link">View</a>
+			<div class="card">
+				<div class="card-body">
+					<h5 class="card-title">{{ piece.title }}</h5>
+					<h6 class="card-subtitle mb-2 text-muted">{{ piece.publishedAt | date('MMMM Do, YYYY') }}</h6>
+					<a href="{{ piece._url}}" class="card-link">View</a>
+				</div>
 			</div>
-		</div>
 		</div>
 		{% endfor %}
 	</div>
