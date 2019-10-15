@@ -49,7 +49,7 @@ var apos = require('apostrophe')({
 				}, {
 					name: 'images',
 					import: {
-						inline:true
+						inline: true
 					}
 				}
 			],
