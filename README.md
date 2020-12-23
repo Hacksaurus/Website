@@ -40,3 +40,8 @@ The SSL connection is the other job that this service accomplishes. Instead of i
 
 ## Conclusion
 This project has gotten me to understand the complexity and the beauty of the Internet and forced me to really get into website development on a very fundamental level, with me manually installing certificates and setting up port forwarding rules. Attempting to make a personal website on a home network was challenging but I was able to pull through with a fairly clean and reliable solution.
+
+## Screenshots
+![Screenshot-2020-12-23-13-23-52.png](https://i.ibb.co/0CWY3cK/Screenshot-2020-12-23-13-23-52.png)
+![Screenshot-2020-12-23-13-24-14.png](https://i.ibb.co/ZBrSwL7/Screenshot-2020-12-23-13-24-14.png)
+![Screenshot-2020-12-23-13-39-20.png](https://i.ibb.co/rZ23kcm/Screenshot-2020-12-23-13-39-20.png)
